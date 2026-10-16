@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="civic_title">Serikali</string>
+    <string name="civic_map_title">Ramani ya Mtaa</string>
+    <string name="civic_back">Rudi nyuma</string>
+    <string name="civic_map">Ramani</string>
+
+    <!-- Statuses (Swahili-first) -->
+    <string name="civic_status_new">Mpya</string>
+    <string name="civic_status_ai_triaged">AI Imepanga</string>
+    <string name="civic_status_awaiting_verification">Subiri Uthibitisho</string>
+    <string name="civic_status_verified">Imethibitishwa</string>
+    <string name="civic_status_assigned">Imepangwa</string>
+    <string name="civic_status_in_progress">Inatekelezwa</string>
+    <string name="civic_status_waiting_external">Ngoja Nje</string>
+    <string name="civic_status_awaiting_resident">Subiri Mwanzaji</string>
+    <string name="civic_status_resolved">Imetatuliwa</string>
+    <string name="civic_status_closed">Imefungwa</string>
+    <string name="civic_status_rejected">Imekataliwa</string>
+    <string name="civic_status_escalated">Imepandishwa</string>
+
+    <!-- Roles -->
+    <string name="civic_role_resident">Mwakazi</string>
+    <string name="civic_role_mjumbe">Mjumbe</string>
+    <string name="civic_role_mwenyekiti">Mwenyekiti</string>
+    <string name="civic_role_mtaa_officer">Afisa wa Mtaa</string>
+    <string name="civic_role_ward_officer">Afisa wa Kata</string>
+    <string name="civic_role_municipal_officer">Afisa wa Manispaa</string>
+    <string name="civic_role_council_admin">Msimamizi wa Baraza</string>
+    <string name="civic_role_department_officer">Afisa wa Idara</string>
+    <string name="civic_role_system_admin">Msimamizi Mkuu</string>
+
+    <!-- Dashboard -->
+    <string name="civic_stats_total">Zote</string>
+    <string name="civic_stats_active">Hai</string>
+    <string name="civic_stats_overdue">Zimechelewa</string>
+    <string name="civic_stats_duplicates">Rudi-rudi</string>
+    <string name="civic_filter_all">Zote</string>
+    <string name="civic_queue_empty">Hakuna ripoti kwenye eneo lako</string>
+    <string name="civic_overdue_badge">Imechelewa</string>
+    <string name="civic_dup_badge_format">Ripoti %1$d</string>
+    <string name="civic_escalation_badge_format">Ngazi %1$d</string>
+
+    <!-- Analytics -->
+    <string name="civic_analytics_title">Uchambuzi</string>
+    <string name="civic_stats_escalated">Zilizopandishwa</string>
+    <string name="civic_stats_avg_resolution">Muda wa kutatua (saa)</string>
+    <string name="civic_stats_sla">Ufuasi wa SLA</string>
+    <string name="civic_analytics_trend">Ripoti kwa siku (siku 14)</string>
+    <string name="civic_analytics_categories">Kwa aina ya tatuo</string>
+    <string name="civic_sla_met">Zilizofika muda: %1$d</string>
+    <string name="civic_sla_missed">Zilichelewa: %1$d</string>
+
+    <!-- Actions -->
+    <string name="civic_action_send_verification">Tuma Uthibitishoni</string>
+    <string name="civic_action_ai_triage">Panga kwa AI</string>
+    <string name="civic_action_verify">Thibitisha</string>
+    <string name="civic_action_reject">Kataa</string>
+    <string name="civic_action_escalate">Pandisha</string>
+    <string name="civic_action_assign">Panga Kitengo</string>
+    <string name="civic_action_start_work">Anza Kazi</string>
+    <string name="civic_action_continue_work">Endelea Kazi</string>
+    <string name="civic_action_external">Ngoja Nje</string>
+    <string name="civic_action_request_confirm">Omba Uthibitisho wa Mwanzaji</string>
+    <string name="civic_action_close">Funga</string>
+    <string name="civic_action_restore">Rejesha Uthibitishoni</string>
+    <string name="civic_action_mark_duplicate">Unganisha Rudi-rudi</string>
+    <string name="civic_action_confirm_resolution">Ndiyo, Imetatuliwa</string>
+    <string name="civic_action_reopen">Haitatuliwi — Fungua Tenana</string>
+    <string name="civic_action_appeal">Rudi Suani</string>
+
+    <!-- Dialogs -->
+    <string name="civic_dialog_reason_title">Sababu</string>
+    <string name="civic_dialog_reason_hint">Andika sababu…</string>
+    <string name="civic_dialog_confirm">Thibitisha</string>
+    <string name="civic_dialog_assign_title">Panga kwa Kitengo</string>
+    <string name="civic_dialog_assign_note_hint">Maelezo ya uwekaji (hiari)</string>
+    <string name="civic_dialog_dup_title">Weka kama Ripoti Rudi-rudi</string>
+    <string name="civic_dialog_dup_hint">Namba ya ripoti (mf. ilala-mc-2026-00001)</string>
+    <string name="civic_common_cancel">Ghairi</string>
+    <string name="civic_common_save">Hifadhi</string>
+    <string name="civic_priority_low">Chini</string>
+    <string name="civic_priority_normal">Kawaida</string>
+    <string name="civic_priority_high">Ya Juu</string>
+    <string name="civic_priority_urgent">Haraka</string>
+    <string name="civic_error_select_unit">Chagua kitengo kwanza</string>
+    <string name="civic_error_ref_not_found">Ripoti haijapatikana: %1$s</string>
+
+    <!-- Detail -->
+    <string name="civic_detail_timeline">Mtiririko wa Hali</string>
+    <string name="civic_detail_assignments">Uwekaji</string>
+    <string name="civic_detail_location">Mahali</string>
+    <string name="civic_detail_resolution">Suluhisho</string>
+    <string name="civic_detail_due">Mwisho wa kazi</string>
+    <string name="civic_detail_no_actions">Hakuna hatua zinazopatikana</string>
+    <string name="civic_history_unspecified">Bila jina</string>
+    <string name="civic_detail_photo">Picha ya tukio</string>
+
+    <!-- AI Routing -->
+    <string name="civic_ai_routing_title">Pendekezo la AI la Uelekezaji</string>
+    <string name="civic_ai_routing_department">Idara Iliyopendekezwa</string>
+    <string name="civic_ai_routing_reason">Sababu</string>
+    <string name="civic_ai_routing_priority">Kipaumbele</string>
+    <string name="civic_ai_routing_sla">Muda wa SLA (saa)</string>
+    <string name="civic_ai_routing_accept">Kubali na Upange</string>
+    <string name="civic_ai_routing_dismiss">Puuza</string>
+    <string name="civic_ai_routing_loading">AI inachambua…</string>
+    <string name="civic_ai_routing_error">AI imeshindwa kupendekeza</string>
+
+    <!-- New report -->
+    <string name="civic_new_title">Ripoti Mtaa</string>
+    <string name="civic_new_category">Aina ya Tatizo</string>
+    <string name="civic_new_title_hint">Kichwa cha tatizo</string>
+    <string name="civic_new_description_hint">Eleza tatizo kwa undani…</string>
+    <string name="civic_new_location_hint">Maelezo ya mahali (mf. karibu na duka la…)</string>
+    <string name="civic_new_severity">Umuhimu</string>
+    <string name="civic_severity_low">Chini</string>
+    <string name="civic_severity_medium">Wastani</string>
+    <string name="civic_severity_high">Kubwa</string>
+    <string name="civic_severity_critical">Dharura</string>
+    <string name="civic_new_anonymous">Tuma bila jina</string>
+    <string name="civic_new_add_photo">Ongeza Picha</string>
+    <string name="civic_new_photo_added">Picha imeongezwa</string>
+    <string name="civic_new_use_gps">Tumia Mahali sasa</string>
+    <string name="civic_new_location_set">Mahali imewekwa</string>
+    <string name="civic_new_submit">Tuma Ripoti</string>
+    <string name="civic_new_error_category">Chagua aina ya tatizo</string>
+    <string name="civic_new_error_title">Andika kichwa cha tatizo</string>
+    <string name="civic_new_error_description">Eleza tatizo kwa undani</string>
+    <string name="civic_new_success_title">Ripoti Imetumwa</string>
+    <string name="civic_new_success_ref">Namba yako: %1$s</string>
+    <string name="civic_new_merged_notice">Tatizo hili linafanana na ripoti iliyopo (%1$s). Ripoti zako zimeunganishwa.</string>
+    <string name="civic_new_done">Sawa</string>
+    <string name="civic_new_location_permission">Ruhusa ya mahali inahitajika kutumia GPS</string>
+
+    <!-- My reports -->
+    <string name="civic_my_title">Ripoti Zangu</string>
+    <string name="civic_my_empty">Hujawahi tuma ripoti yoyote</string>
+    <string name="civic_my_filter_all">Zote</string>
+
+    <!-- Map -->
+    <string name="civic_map_empty">Hakuna ripoti zenye mahali</string>
+    <string name="civic_map_hint">Alama za rangi zinaonyesha hali ya ripoti</string>
+    <string name="civic_map_stats_format">Zote %1$d · Zimechelewa %2$d · Zimepandishwa %3$d</string>
+
+    <!-- Announcements -->
+    <string name="civic_announcements_title">Matangazo ya Serikali</string>
+    <string name="civic_announcement_empty">Hakuna matangazo kwa sasa</string>
+    <string name="civic_announcement_pinned">Imebanwa juu</string>
+    <string name="civic_category_notice">Taarifa</string>
+    <string name="civic_category_health">Afya</string>
+    <string name="civic_category_safety">Usalama</string>
+    <string name="civic_category_event">Tukio</string>
+    <string name="civic_category_utility">Huduma za Msingi</string>
+    <string name="civic_publish">Tangaza</string>
+    <string name="civic_publish_dialog_title">Tangaza Tangazo</string>
+    <string name="civic_publish_title_hint">Kichwa cha tangazo</string>
+    <string name="civic_publish_body_hint">Maelezo ya tangazo…</string>
+    <string name="civic_publish_pinned">Banwa juu ya matangazo</string>
+    <string name="civic_publish_send">Tangaza Sasa</string>
+
+    <!-- AI assistant -->
+    <string name="civic_ai_title">Msaidizi wa AI</string>
+    <string name="civic_ai_self_id">Mimi ni Msaidizi wa AI wa SmartJirani — si mtu, wala mfanyikazi wa manispaa.</string>
+    <string name="civic_ai_mock_badge">hali ya majaribio</string>
+    <string name="civic_ai_input_hint">Andika ujumbe wako…</string>
+    <string name="civic_ai_send">Tuma</string>
+    <string name="civic_ai_thinking">Inafikiri…</string>
+    <string name="civic_ai_triage_done">AI imepanga ripoti yako. Msimamizi ataihakiki hivi karibuni.</string>
+
+    <!-- Admin configuration -->
+    <string name="civic_admin_title">Usanidi wa Serikali</string>
+    <string name="civic_admin_section_roles">Wadhifa za Viongozi</string>
+    <string name="civic_admin_section_units">Mitaa na Vitengo</string>
+    <string name="civic_admin_section_categories">Makundi ya Matatizo</string>
+    <string name="civic_admin_section_sla">Kanuni za Muda (SLA)</string>
+    <string name="civic_admin_roles_empty">Hakuna wadhifa uliotolewa bado</string>
+    <string name="civic_admin_assign">Pewa Wadhifa</string>
+    <string name="civic_admin_revoke">Ondoa</string>
+    <string name="civic_admin_active">Hai</string>
+    <string name="civic_admin_inactive">Imesimamishwa</string>
+    <string name="civic_admin_assign_title">Pewa Wadhifa Mpya</string>
+    <string name="civic_admin_assign_search_hint">Tafuta mtumiaji (jina, simu au barua pepe)</string>
+    <string name="civic_admin_assign_role_label">Wadhifa</string>
+    <string name="civic_admin_assign_unit_label">Kitengo</string>
+    <string name="civic_admin_assign_confirm">Pewa</string>
+    <string name="civic_admin_assign_empty">Hakuna mtumiaji aliyepatikana</string>
+    <string name="civic_admin_units_empty">Hakuna vitengo — anza kwa kuongeza kimoja</string>
+    <string name="civic_admin_unit_add">Ongeza Kitengo</string>
+    <string name="civic_admin_unit_title">Ongeza Kitengo Kipya</string>
+    <string name="civic_admin_unit_type_label">Aina ya Kitengo</string>
+    <string name="civic_admin_unit_name_hint">Jina la kitengo (mf. Mtaa Mwenge)</string>
+    <string name="civic_admin_unit_parent_label">Kitengo Mama (si lazima)</string>
+    <string name="civic_admin_unit_parent_none">— Hakuna —</string>
+    <string name="civic_admin_unit_code_hint">Msimbo (si lazima)</string>
+    <string name="civic_admin_categories_empty">Hakuna makundi — ongeza ya kwanza</string>
+    <string name="civic_admin_category_add">Ongeza Kundi</string>
+    <string name="civic_admin_category_title">Ongeza Kundi Jipya</string>
+    <string name="civic_admin_category_name_en_hint">Jina kwa Kiingereza</string>
+    <string name="civic_admin_category_name_sw_hint">Jina kwa Kiswahili</string>
+    <string name="civic_admin_category_desc_hint">Maelezo (si lazima)</string>
+    <string name="civic_admin_category_verify">Inahitaji uthibitisho wa afisa</string>
+    <string name="civic_admin_sla_empty">Hakuna kanuni za muda</string>
+    <string name="civic_admin_sla_add">Ongeza Kanuni</string>
+    <string name="civic_admin_sla_title">Ongeza Kanuni ya Muda</string>
+    <string name="civic_admin_sla_category_label">Kundi (si lazima)</string>
+    <string name="civic_admin_sla_severity_label">Umuhimu</string>
+    <string name="civic_admin_sla_priority_label">Kipaumbele</string>
+    <string name="civic_admin_sla_response_hint">Saa za majibu</string>
+    <string name="civic_admin_sla_resolution_hint">Saa za kutatua</string>
+    <string name="civic_admin_sla_scope_all">— Yote —</string>
+
+    <!-- Channel preference editor -->
+    <string name="civic_channel_pref_title">Njia za arifa</string>
+    <string name="civic_channel_pref_in_app">Ndani ya programu tu</string>
+    <string name="civic_channel_pref_sms">SMS</string>
+    <string name="civic_channel_pref_whatsapp">WhatsApp</string>
+    <string name="civic_channel_pref_save">Hifadhi</string>
+    <string name="civic_channel_pref_saved">Hifadhi imefanikiwa.</string>
+
+    <!-- Official filter chips -->
+    <string name="civic_official_filter_all">Zote</string>
+    <string name="civic_official_filter_awaiting_verification">Zinasubiri uthibitisho</string>
+    <string name="civic_official_filter_overdue">Zimechelewa</string>
+    <string name="civic_official_filter_mine">Zangu</string>
+    <string name="civic_official_filter_new_today">Mpya leo</string>
+
+    <!-- Department officer console -->
+    <string name="department_officer_console">Konsoli ya Afisa wa Idara</string>
+    <string name="kpi_open">Hai</string>
+    <string name="kpi_overdue">Zimechelewa</string>
+    <string name="kpi_sla_at_risk">SLA Hatarini</string>
+    <string name="kpi_resolved_today">Zimetatuliwa Leo</string>
+    <string name="no_reports_in_queue">Hakuna ripoti kwenye foleni</string>
+    <string name="selected">zimechaguliwa</string>
+    <string name="batch_assign">Panga</string>
+    <string name="batch_verify">Thibitisha</string>
+    <string name="status_overdue">IMECHELEWA</string>
+    <string name="status_left">zimebaki</string>
+
+    <!-- Dedup check -->
+    <string name="civic_dedup_title">Ripoti Zinazofanana Zimepatikana</string>
+    <string name="civic_dedup_message">Ripoti hizi zinafanana na yako. Angalia kama tatizo limesharipotiwa.</string>
+    <string name="civic_dedup_proceed">Endelea na Ripoti Mpya</string>
+    <string name="civic_dedup_cancel">Ghairi</string>
+    <string name="civic_dedup_similarity">Ufanano: %1$d%%</string>
+    <string name="civic_dedup_checking">Inatafuta ripoti zinazofanana…</string>
+
+    <!-- Voice recording -->
+    <string name="civic_voice_record">Rekodi Sauti</string>
+    <string name="civic_voice_stop">Simamisha</string>
+    <string name="civic_voice_cancel">Ghairi</string>
+    <string name="civic_voice_transcribing">Inatafsiri…</string>
+
+    <!-- Image analysis -->
+    <string name="civic_detail_analyze_image">Chambua Picha</string>
+    <string name="civic_detail_analyzing">Inachambua…</string>
+    <string name="civic_ai_analysis_title">Uchambuzi wa AI</string>
+    <string name="civic_ai_analysis_loading">Inachambua ripoti…</string>
+    <string name="civic_ai_analysis_area">Eneo lililoathirika</string>
+    <string name="civic_ai_analysis_population">Athari kwa watu</string>
+    <string name="civic_ai_analysis_infrastructure">Aina ya miundombinu</string>
+    <string name="civic_ai_analysis_severity">Kadirio la umuhimu</string>
+    <string name="civic_ai_analysis_actions">Hatua zilizopendekezwa</string>
+    <string name="civic_ai_analysis_urgency">Sababu za dharura</string>
+    <string name="civic_ai_analysis_dismiss">Funga</string>
+</resources>

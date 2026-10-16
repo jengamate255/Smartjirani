@@ -1,0 +1,19 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{kt,kts}]
+indent_style = space
+indent_size = 4
+ktlint_code_style = ktlint_official
+# Existing code exceeds 100 columns widely and ktlint cannot auto-wrap, so the
+# rule is off until a dedicated wrapping pass is done.
+max_line_length = off
+# Not auto-fixable by ktlint; 4 imports in DepartmentOfficerConsoleScreen.kt use wildcards.
+ktlint_standard_no-wildcard-imports = disabled
+# Compose screens and JUnit tests legitimately use PascalCase / backticked names.
+ktlint_standard_function-naming = disabled

@@ -1,0 +1,29 @@
+# Project-wide Gradle settings.
+org.gradle.jvmargs=-Xmx3072m -Dfile.encoding=UTF-8
+kotlin.daemon.jvmargs=-Xmx2048m
+org.gradle.parallel=false
+org.gradle.workers.max=2
+kotlin.incremental=true
+android.useAndroidX=true
+kotlin.code.style=official
+android.nonTransitiveRClass=true
+
+# Supabase Configuration
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_ANON_KEY=your-anon-key-here
+
+# PesaPal Payment Configuration (https://developer.pesapal.com)
+PESAPAL_CONSUMER_KEY=your-consumer-key
+PESAPAL_CONSUMER_SECRET=your-consumer-secret
+PESAPAL_ENV=sandbox
+PESAPAL_CALLBACK_URL=
+
+# Mapbox Configuration
+MAPBOX_DOWNLOADS_TOKEN=your-mapbox-downloads-token
+MAPBOX_ACCESS_TOKEN=your-mapbox-access-token
+
+# Release signing (keystore/ is gitignored — never commit the keystore or passwords)
+SMARTJIRANI_KEYSTORE_PATH=keystore/smartjirani-release.keystore
+SMARTJIRANI_KEYSTORE_PASSWORD=your-keystore-password
+SMARTJIRANI_KEY_ALIAS=smartjirani
+SMARTJIRANI_KEY_PASSWORD=your-key-password

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Top bar -->
+    <string name="ujamaa_title">Ujamaa Hub</string>
+    <string name="ujamaa_subtitle">Umoja ni nguvu</string>
+
+    <!-- Empty states -->
+    <string name="ujamaa_select_neighborhood">Chagua mtaa wako</string>
+    <string name="ujamaa_select_neighborhood_message">Chagua mtaa wako ili kuona rasilimali za ujamaa na mahitaji ya jirani zako.</string>
+    <string name="ujamaa_empty_title">Bado hakuna ujamaa</string>
+    <string name="ujamaa_empty_message">Hakuna mahitaji au rasilimali katika mtaa wako kwa sasa.</string>
+
+    <!-- Solidarity ticker -->
+    <string name="ujamaa_ticker_title">ROHO UA HARAMBEE</string>
+    <string name="ujamaa_ticker_neighbors_format">%d jirani wamesaidiwa</string>
+    <string name="ujamaa_ticker_period">mwezi huu katika mtaa wako</string>
+    <string name="ujamaa_ticker_loans_format">%d mikopo hai</string>
+    <string name="ujamaa_ticker_interest">KSh 0 (Ujamaa safi)</string>
+
+    <!-- Action launcher -->
+    <string name="ujamaa_offer_item">Toa kitu</string>
+    <string name="ujamaa_request_help">Omba msaada</string>
+
+    <!-- Section headers -->
+    <string name="ujamaa_urgent_needs">Mahitaji ya haraka</string>
+    <string name="ujamaa_share_resources">Kopa na Shiriki karibu nawe</string>
+    <string name="ujamaa_view_map">Ramani</string>
+
+    <!-- Urgent need card -->
+    <string name="ujamaa_urgent_label">HITAJI LA DHARURA</string>
+    <string name="ujamaa_help_offered">Umeahidi kusaidia</string>
+    <string name="ujamaa_can_help">Ninaweza kusaidia</string>
+
+    <!-- Resource card -->
+    <string name="ujamaa_free_to_borrow">Bure kukopa</string>
+    <string name="ujamaa_unavailable">Haiwezekani kwa sasa</string>
+    <string name="ujamaa_request_sent">Ombi limetumwa</string>
+
+    <!-- Harambee fund -->
+    <string name="ujamaa_fund_raised_format">KES %1$s / %2$s imekusanywa</string>
+    <string name="ujamaa_contributing">Inachakata…</string>
+    <string name="ujamaa_contribute_mpesa">Changia kupitia M-Pesa</string>
+
+    <!-- Contribution sheet -->
+    <string name="ujamaa_select_amount">Chagua kiasi</string>
+    <string name="ujamaa_pay_format">Lipa KSh %d</string>
+    <string name="ujamaa_amount_format">KSh %d</string>
+
+    <!-- Toasts -->
+    <string name="ujamaa_toast_help_on">Umesema utasaidia</string>
+    <string name="ujamaa_toast_help_off">Umeondoa ahadi yako</string>
+    <string name="ujamaa_toast_resource_requested">Ombi limetumwa kwa mmiliki</string>
+    <string name="ujamaa_toast_contribution_settled">Asante! KSh %d imeingia kwenye mfuko</string>
+    <string name="ujamaa_toast_payment_complete">Malipo yamekamilika · KSh %d yameingia</string>
+    <string name="ujamaa_toast_offer_opening">Fungua kadi mpya ya kuongeza kitu…</string>
+    <string name="ujamaa_toast_ask_opening">Ombi lako litatumwa kwa majirani…</string>
+    <string name="ujamaa_toast_map_coming">Ramani ya mtaa inakuja hivi karibu</string>
+
+    <!-- Map -->
+    <string name="ujamaa_map_title">Ramani</string>
+    <string name="ujamaa_map_back">Rudi</string>
+    <string name="ujamaa_map_selected_format">Mtaa wako: %s</string>
+    <string name="ujamaa_map_radius_format">Ukubwa wa mtaa: %d m</string>
+    <string name="ujamaa_map_empty_title">Hakuna mitaa kwenye ramani</string>
+    <string name="ujamaa_map_empty_message">Tafadhali angalia upya kupata mitaa ya karibu nawe.</string>
+    <string name="ujamaa_map_loading">Inapakia ramani ya mtaa…</string>
+</resources>

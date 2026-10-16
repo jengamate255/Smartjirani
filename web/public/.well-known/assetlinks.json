@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.smartjirani.app",
+      "sha256_cert_fingerprints": [
+        "4B:F9:A6:A2:93:8E:0F:09:D3:3B:E2:D0:19:BB:84:FE:E7:0D:42:CF:6D:BC:BC:63:E2:46:63:59:2A:82:97:83"
+      ]
+    }
+  }
+]

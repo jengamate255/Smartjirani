@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#fafaf4", "background": "#fafaf4", "on-secondary-container": "#6c1900", "primary-container": "#135d43", "surface-container-low": "#f4f4ef", "inverse-on-surface": "#f1f1ec", "on-tertiary-fixed": "#2f1400", "on-primary-container": "#8ed4b2", "primary-fixed": "#abf1cf", "on-error-container": "#93000a", "tertiary-fixed-dim": "#ffb780", "secondary-fixed-dim": "#ffb5a0", "error": "#ba1a1a", "on-surface-variant": "#3f4943", "on-background": "#1a1c19", "on-tertiary-fixed-variant": "#6f3800", "on-primary": "#ffffff", "surface-variant": "#e3e3de", "surface-dim": "#dadad5", "secondary-fixed": "#ffdbd1", "on-secondary": "#ffffff", "surface-container-highest": "#e3e3de", "surface-container": "#eeeee9", "primary-fixed-dim": "#90d5b4", "surface-container-lowest": "#ffffff", "secondary": "#a73918", "inverse-primary": "#90d5b4", "tertiary-container": "#7e4205", "on-primary-fixed": "#002115", "on-error": "#ffffff", "on-secondary-fixed": "#3b0900", "inverse-surface": "#2f312e", "primary": "#00442f", "outline-variant": "#bfc9c1", "error-container": "#ffdad6", "surface-container-high": "#e8e8e3", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#862201", "secondary-container": "#fe7952", "on-primary-fixed-variant": "#005139", "tertiary": "#5d2e00", "on-tertiary-container": "#ffb57d", "outline": "#707973", "surface-bright": "#fafaf4", "surface-tint": "#246a4f", "tertiary-fixed": "#ffdcc4", "on-surface": "#1a1c19" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin-tablet": "1.5rem", "gutter-desktop": "1.5rem", "margin-desktop": "2.5rem", "gutter": "1rem", "space-md": "1rem", "margin": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="SmartJirani Emblem" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYZDT_gdrN20v3AUQYxLoYyCjyp4ZygXy8-ZW4wgO07xJ4nwopRh-imK_600zqx3_4us-5jlhAOmBY-G3xa-Axaacpo9EyUWQb7TjpOvL-R_5AUlt6SSLJHIW7W1BGR-M6Vgu5BWh0Gad_aY0Emz4tYnlmpt2eXh47Wzh2_a_Vh0k94fth6nCLCNYGsbJ-rZ4JJAJXHPyxHkXT7ZD3le_2DTjnUZ2IL5agNowmhhN9XUXBhmcicrTQJg"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-primary tracking-tight font-bold leading-none">SmartJirani</span><span class="hidden sm:inline font-label-sm text-label-sm text-on-surface-variant font-normal opacity-70">· Ujamaa Hub</span></div><div class="flex items-center mt-0.5"><div class="inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-primary/10 rounded-full text-primary font-label-sm text-label-sm truncate max-w-[210px]"><span class="truncate">Kileleshwa, Ole Dume Rd</span><span class="material-symbols-outlined text-[12px] leading-none shrink-0">location_on</span></div></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full ring-2 ring-surface"></span></button><a class="relative w-11 h-11 flex items-center justify-center rounded-full transition-transform active:scale-95" data-path="resident-profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCxUqUfSmh8XuhKd3dEegrRBwpsbvYxkK35p_oTA1y_lFN3gZDM-_e5smSTjUL9p6uI1I86e6a2UsY0ghuj-hbG5JHEH7OSVR35UPoB7hS8j3mU5LVRU8PFApSEjFBXiBUfTXbNFoK9RUuCZ5IwYspQ7h_FGheZU1ffALZjB3rv4Zigd6PE3sUnDDtfn_qCbA2nzOP8oxP02Zx6b6T6cwbVcMzu0ZGSQtlNsYSg4GTtZvXP0Cf3akzTg"/><span class="absolute bottom-1 right-1 w-2.5 h-2.5 bg-primary-container rounded-full ring-1 ring-surface"></span></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- Top Ambient Banner & Floating Mode Bar -->
+<div class="px-margin pt-space-sm pb-space-xs">
+<!-- Live Solidarity Ticker -->
+<div class="relative overflow-hidden bg-primary text-on-primary rounded-xl p-space-md shadow-md">
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container font-bold">Harambee Spirit • Ole Dume</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-primary-container" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<div class="mt-1 flex items-baseline gap-space-xs">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight text-surface-bright">38 Neighbors</span>
+<span class="font-label-md text-label-md text-on-primary-container">helped this month</span>
+</div>
+<!-- Micro Stat Badges Row -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-xs">
+<div class="bg-primary-container/60 rounded-lg px-2.5 py-1.5 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">sync_alt</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-primary truncate">12 Active Borrows</span>
+</div>
+<div class="bg-primary-container/60 rounded-lg px-2.5 py-1.5 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">favorite</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-primary truncate">0 KSh (Pure Ujamaa)</span>
+</div>
+</div>
+</div>
+<!-- Soft ambient backdrop bloom -->
+<div class="absolute -right-6 -bottom-6 w-28 h-28 bg-primary-container/70 rounded-full blur-2xl pointer-events-none"></div>
+</div>
+</div>
+<!-- Dual Action Launcher (Offer vs Ask) -->
+<div class="px-margin py-space-xs">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="relative group flex items-center justify-center gap-space-xs bg-primary text-on-primary py-3 px-space-sm rounded-xl font-label-lg text-label-lg font-bold shadow-sm active:scale-95 transition-all" id="open-offer-modal">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Offer an Item</span>
+</button>
+<button class="relative group flex items-center justify-center gap-space-xs bg-secondary-container text-on-secondary-container py-3 px-space-sm rounded-xl font-label-lg text-label-lg font-bold shadow-sm active:scale-95 transition-all" id="open-ask-modal">
+<span class="material-symbols-outlined text-[20px]">pan_tool</span>
+<span>Ask for Help</span>
+</button>
+</div>
+</div>
+<!-- Category Filter Pill Strip (Horizontal Scroll) -->
+<div class="pt-space-sm pb-space-xs">
+<div class="flex items-center gap-2 overflow-x-auto px-margin no-scrollbar" id="category-pills">
+<button class="cat-pill active flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-bold bg-primary text-on-primary shadow-sm transition-all" data-category="all">
+        All Needs
+      </button>
+<button class="cat-pill flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface-variant transition-all hover:bg-surface-container-high" data-category="tools">
+        🛠️ Tools & Gear
+      </button>
+<button class="cat-pill flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface-variant transition-all hover:bg-surface-container-high" data-category="rides">
+        🚗 Ride Shares
+      </button>
+<button class="cat-pill flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface-variant transition-all hover:bg-surface-container-high" data-category="books">
+        📚 School Books
+      </button>
+<button class="cat-pill flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface-variant transition-all hover:bg-surface-container-high" data-category="seeds">
+        🌱 Seeds & Harvest
+      </button>
+<button class="cat-pill flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container text-on-surface-variant transition-all hover:bg-surface-container-high" data-category="skills">
+        🤝 Skills Swap
+      </button>
+</div>
+</div>
+<!-- Urgent Community Need Card (Terracotta accented highlight) -->
+<div class="px-margin py-space-xs">
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<!-- Terracotta Left Stride Accent -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="pl-2">
+<div class="flex items-center justify-between gap-2 mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="flex items-center justify-center w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-[11px] font-bold">
+<span class="material-symbols-outlined text-[13px] leading-none">emergency</span>
+</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">Urgent Neighborhood Need</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold bg-secondary-fixed/50 px-2 py-0.5 rounded-full">Active Now</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface leading-snug">
+          Pediatric nebulizer needed for 2 hours
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+          For baby neighbor with sudden croup symptoms. Requested by <span class="font-semibold text-on-surface">Dr. Wanjiru</span> (Ole Dume Court, House 14C).
+        </p>
+<!-- Social Proof & Trust Info -->
+<div class="flex items-center gap-2 mt-3 pt-2.5 bg-surface-container-low/70 rounded-lg p-2">
+<img class="w-8 h-8 rounded-full object-cover shrink-0" data-alt="Warm portrait of Dr. Wanjiru, a Kenyan female pediatrician wearing glasses and a soft patterned teal blouse, standing in an eco-friendly modern Nairobi apartment hallway, smiling reassuringly, captured in soft warm natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJpydxtDgyU_5VAP63dG92OpRVYUSfOESnehHgumBowLEmTMq9PgtaRy5_duU1zjnFYa2SRP1OZlMglHMDzwvIOjsA-NdUeYX7-LQ87vHpa1LCocszS1YKRkjqb0kygkJ0zU0Ko4-ZVll6jlju5RVC4jPr6riIKSoF4b4NU3_oDbG8fOOUC8WPeP8JAT4g3qQGiUeY1Wf_VdlrgrWL-LW_hex0iNvNK8oeDRs6xgWgNEf_uXDR63Qisg"/>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface truncate">Dr. Grace Wanjiru</span>
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-label-sm text-[11px] text-on-surface-variant truncate">Resident 4 yrs • Street First Responder</p>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant shrink-0">80m away</span>
+</div>
+<!-- Call to Action Relay -->
+<div class="mt-3 flex items-center gap-2">
+<button class="flex-1 bg-secondary text-on-secondary py-2.5 px-space-sm rounded-lg font-label-md text-label-md font-bold shadow-sm active:scale-95 transition-all flex items-center justify-center gap-1.5" id="help-btn">
+<span class="material-symbols-outlined text-[18px]">volunteer_activism</span>
+<span id="help-btn-text">I Can Help With This</span>
+</button>
+<a aria-label="Call Dr. Wanjiru" class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center hover:bg-surface-variant transition-colors active:scale-95 shrink-0" href="tel:+254700000000">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- "Borrow & Share Near You" Feed Section -->
+<div class="px-margin pt-space-md pb-space-xs">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">handshake</span>
+<h2 class="font-title-md text-title-md font-bold text-on-surface">Borrow & Share Near You</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline">View Map</button>
+</div>
+<!-- Feed Stack -->
+<div class="flex flex-col gap-space-sm" id="resource-cards-list">
+<!-- Item 1: Bosch Drill -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-2 min-w-0">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Portrait of John Otieno, an energetic Kenyan civil engineer and neighbor in his late 30s wearing a casual linen henley shirt, warm evening sunlight outdoors on a leafy Ole Dume balcony in Nairobi, shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB0OuvostmvReXPKziLiUYTPI_7hWvlwilgcsiajMX1QuWq4BQ7-dWdYzNBbHu_GUTQyzOHJr4rW9MGTLJaOs1OA6yL2Kc4Hks_528ztZwEn7Wav2d0Bt0fvU0WzLFOz-FoirfgtVTE-jjNmNrfwclctIM6mA-Q48_sEY9JdNtuM3fQOGTEjFVhWz_9nrmjhCoUQOC0LATKR1xwn9ih4XtreOws_nyYm4-01td51VTrB51d13LiYRMPg"/>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">John O.</span>
+<span class="inline-flex items-center text-[10px] font-bold text-primary bg-primary/10 px-1 rounded-full">House 22A</span>
+</div>
+<p class="font-label-sm text-[11px] text-on-surface-variant truncate">120m away • 14 loans completed</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-primary-fixed text-on-primary-fixed shrink-0">
+            🛠️ Tool
+          </span>
+</div>
+<div class="flex gap-space-sm items-center">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A clean, heavy-duty Bosch blue cordless power drill with drill bit case open beside it, sitting on a solid warm wooden workbench in a brightly lit tidy home workshop, cinematic angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzVip1d9bZBxSSZD0An9I9Mkd2LvUrKJSZqtcdz1Oe6o5-lXx1ibHOad5uU6CMk0W_PD1nlK84eRJymYenIaALRygtNteLhmELxxLf87lvAhTM5T81mN-AsoFcUT-SPDhEQoqxR6m-qUueEg5Tf0IfDAIk1BLbTlW4i8RyQf1Eewk4kYHTI_9TEX6p3iwgE-5DOz5H8JvdkH7CKEPkDsjID2llYvW96_sIJkcNaolFfHHwjww3dlMVoA"/>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface truncate">Bosch Power Drill & Bits Set</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Includes masonry and wood drill set + extra battery. Available for 24-hr slots.</p>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="font-label-sm text-[11px] text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">event_available</span>
+                Until Friday
+              </span>
+<span class="text-on-surface-variant text-[11px]">·</span>
+<span class="font-label-sm text-[11px] text-tertiary font-medium">Goodwill/Trust Deposit</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Free to borrow</span>
+<button class="request-item-btn px-4 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-bold active:scale-95 transition-all">
+            Request Drill
+          </button>
+</div>
+</div>
+<!-- Item 2: Aluminium Ladder -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-2 min-w-0">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Close-up portrait of Mama Grace, a respected Kenyan grandmother and community elder in Nairobi, wearing a vibrant kanga headscarf and gold hoop earrings, warm motherly smile, porch garden background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMSSNgSQf4HQ5kLuO9OO-64bL8Qa0e6lRY_VCymJtGIESp0AAl0RDlTJ71v9kpOOTUBLq45n7-pl5oDSliB3mRLRRtrhjsTpqSy21dat1gIU9MP7Dk3TRJBqufbR6VlKq6zTu3FdqoPdDys-dDaAjEBO4vv-XLEPIoOO71MhhS8_osyBOH3CP4QjzbQIq7g8CwKwKZpCMTFuB9UDBFYcwDlQvxakp9RZZ51j1nGcn8yQc4DpZeFGTPLA"/>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Mama Grace</span>
+<span class="inline-flex items-center text-[10px] font-bold text-primary bg-primary/10 px-1 rounded-full">House 8B</span>
+</div>
+<p class="font-label-sm text-[11px] text-on-surface-variant truncate">50m away • Elder Council Verified</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-primary-fixed text-on-primary-fixed shrink-0">
+            🪜 Gear
+          </span>
+</div>
+<div class="flex gap-space-sm items-center">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Lightweight 3.5 meter aluminium folding step ladder leaning cleanly against a modern outdoor stone garden wall surrounded by lush tropical monstera and bougainvillea plants in Kileleshwa Nairobi, daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBevLryogD17ZeQO-gbOn24EDRYuYpLrIg-vOB0BF4YxrwqXeYgob0pKhFqSUlHS96WhZxAuNPUR5LNU9GbAdTzAR4wjxJtmAj6eOpR7N5iHqWNnftGvWqXcY3a1qlOI0II07PfmqB2NbhsWj2uN2UO29O_zCiq6g8k7AxjSIxf7Z5jTd86q39KL3skIxh7za_a6ngKlq6spGKi7vgiDmObVIf0gwPCGRe3-C08SH1WGU21x43PHvOidQ"/>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface truncate">Step Ladder (3.5m Aluminium)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Heavy-duty dual fold. Ideal for changing high compound bulbs or gutter checks.</p>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="font-label-sm text-[11px] text-primary-container font-bold flex items-center gap-0.5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+                Available Now
+              </span>
+<span class="text-on-surface-variant text-[11px]">·</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Gate collection</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Free communal loan</span>
+<button class="request-item-btn px-4 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-bold active:scale-95 transition-all">
+            Request Ladder
+          </button>
+</div>
+</div>
+<!-- Item 3: Carpool Upper Hill -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-2 min-w-0">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Portrait of Kevin T., an approachable Kenyan finance professional in his early 30s sitting in the driver seat of a spotless hybrid crossover car, warm morning Nairobi glow, cheerful commuter vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdgiCRl9itsp-4EpkwG17RC0P5_pwCQ2re3-vsO4RxhcC2CYombl699iu1aGMikAgNmadHJxa6ThNEtHjhAJNy4hhG5lDdXe6IezOvS6XU0Ptm82lij92KT8zM71qaClAlmzbOzVRO_3UmKHpqWNHTaJXrXGK5ijGDIH6TxjGBbpcTYr3LcKhY_aKt3m1qCv6QVLFHzsUFqbuXqt440BJmENC5GYkKuYjWdkw52jQgR89oc0OH6D2B_g"/>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Kevin T.</span>
+<span class="inline-flex items-center text-[10px] font-bold text-primary bg-primary/10 px-1 rounded-full">House 15D</span>
+</div>
+<p class="font-label-sm text-[11px] text-on-surface-variant truncate">Same lane neighbor • Daily commuter</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-secondary-fixed text-on-secondary-fixed shrink-0">
+            🚗 Carpool
+          </span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<div class="flex items-center justify-between">
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface truncate">Upper Hill Route (Mon-Fri)</h4>
+<span class="font-label-sm text-label-sm font-bold text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px]">airline_seat_recline_normal</span>
+              2 Seats Free
+            </span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-label-sm text-[11px]">
+<span class="flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[13px]">alarm</span> 7:15 AM departure
+            </span>
+<span>·</span>
+<span>Via Ring Road & Community Bus Stop</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Shared fuel barter/good vibes</span>
+<button class="request-item-btn px-4 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-bold active:scale-95 transition-all">
+            Join Carpool
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Community Emergency Pool (Kikundi / Harambee) -->
+<div class="px-margin pt-space-md pb-space-lg">
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Emergency & Guard Pool</h3>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Ole Dume Kikundi Harambee Fund</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-0.5 font-label-sm text-[11px] font-bold text-primary bg-primary-fixed/60 px-2 py-0.5 rounded-full">
+          Verified Audit
+        </span>
+</div>
+<!-- Financial Progress Meter -->
+<div class="mt-space-sm bg-surface-container rounded-lg p-space-sm">
+<div class="flex items-baseline justify-between mb-1.5">
+<div class="flex items-baseline gap-1">
+<span class="font-title-md text-title-md font-bold text-on-surface">KES 42,500</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">raised</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">85% of KES 50,000</span>
+</div>
+<!-- Custom Tactile Progress Bar -->
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-primary-container to-primary rounded-full transition-all duration-700 ease-out" style="width: 85%;"></div>
+</div>
+<div class="flex items-center justify-between mt-2 font-label-sm text-[11px] text-on-surface-variant">
+<span>Target: Solar gate lighting & night guard first-aid kit</span>
+<span class="font-bold text-secondary">KES 7,500 left</span>
+</div>
+</div>
+<!-- Quick M-Pesa CTA -->
+<div class="mt-space-sm flex items-center gap-space-sm">
+<button class="flex-1 bg-primary text-on-primary py-2.5 px-space-sm rounded-lg font-label-md text-label-md font-bold shadow-sm active:scale-95 transition-all flex items-center justify-center gap-1.5" id="mpesa-fund-btn">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span>Contribute with M-Pesa</span>
+</button>
+<button class="px-3 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high active:scale-95 transition-all flex items-center justify-center" id="view-ledger-btn">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Quick Contribution Drawer / Modal (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end justify-center" id="mpesa-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg shadow-xl animate-in slide-in-from-bottom duration-300">
+<div class="w-12 h-1 bg-surface-container-highest rounded-full mx-auto mb-space-md"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">M-Pesa Express Harambee</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="close-mpesa-modal">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+        Direct STK push to your Safaricom line. Zero transaction fee for Ole Dume community aid pool.
+      </p>
+<div class="flex gap-2 mb-space-md">
+<button class="mpesa-preset-btn flex-1 py-2 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface hover:bg-primary hover:text-on-primary transition-colors" data-amt="250">KES 250</button>
+<button class="mpesa-preset-btn flex-1 py-2 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface hover:bg-primary hover:text-on-primary transition-colors" data-amt="500">KES 500</button>
+<button class="mpesa-preset-btn flex-1 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold" data-amt="1000">KES 1,000</button>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl mb-space-md">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant block mb-1">M-Pesa Phone Number</label>
+<input class="w-full bg-transparent font-title-md text-title-md font-bold text-on-surface outline-none" readonly="" type="tel" value="0712 ••• 482"/>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-label-lg text-label-lg font-bold shadow-md active:scale-95 transition-all flex items-center justify-center gap-2" id="trigger-stk-btn">
+<span class="material-symbols-outlined text-[20px]">send_to_mobile</span>
+<span>Send STK Prompt (KES 1,000)</span>
+</button>
+</div>
+</div>
+<!-- Toast Notification Capsule -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 transform -translate-y-4" id="toast-pill">
+<div class="bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full font-label-sm text-label-sm font-bold shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">check_circle</span>
+<span id="toast-text">Action recorded! Asanteni sana.</span>
+</div>
+</div>
+</div>
+<script>
+  // Filter pills interactive highlight
+  const filterPills = document.querySelectorAll('.cat-pill');
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm', 'active');
+        p.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      pill.classList.add('bg-primary', 'text-on-primary', 'shadow-sm', 'active');
+      showToast('Filtered: ' + pill.textContent.trim());
+    });
+  });
+
+  // Urgent Need Relay action
+  const helpBtn = document.getElementById('help-btn');
+  const helpBtnText = document.getElementById('help-btn-text');
+  let helped = false;
+
+  if (helpBtn) {
+    helpBtn.addEventListener('click', () => {
+      helped = !helped;
+      if (helped) {
+        helpBtn.classList.remove('bg-secondary', 'text-on-secondary');
+        helpBtn.classList.add('bg-primary', 'text-on-primary');
+        helpBtnText.textContent = 'Relay Sent to Dr. Wanjiru!';
+        showToast('Connecting via WhatsApp relay with Ole Dume Court 14C');
+      } else {
+        helpBtn.classList.add('bg-secondary', 'text-on-secondary');
+        helpBtn.classList.remove('bg-primary', 'text-on-primary');
+        helpBtnText.textContent = 'I Can Help With This';
+      }
+    });
+  }
+
+  // Request item micro-interaction
+  const requestButtons = document.querySelectorAll('.request-item-btn');
+  requestButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const orig = btn.textContent;
+      btn.textContent = 'Requested!';
+      btn.classList.add('bg-primary', 'opacity-90');
+      showToast('Request sent to neighbor with goodwill confirmation.');
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.classList.remove('bg-primary', 'opacity-90');
+      }, 3500);
+    });
+  });
+
+  // M-Pesa Modal Toggle & Presets
+  const mpesaBtn = document.getElementById('mpesa-fund-btn');
+  const mpesaModal = document.getElementById('mpesa-modal');
+  const closeMpesa = document.getElementById('close-mpesa-modal');
+  const triggerStk = document.getElementById('trigger-stk-btn');
+  const presets = document.querySelectorAll('.mpesa-preset-btn');
+
+  if (mpesaBtn && mpesaModal && closeMpesa) {
+    mpesaBtn.addEventListener('click', () => {
+      mpesaModal.classList.remove('hidden');
+      mpesaModal.classList.add('flex');
+    });
+
+    closeMpesa.addEventListener('click', () => {
+      mpesaModal.classList.add('hidden');
+      mpesaModal.classList.remove('flex');
+    });
+
+    mpesaModal.addEventListener('click', (e) => {
+      if (e.target === mpesaModal) {
+        mpesaModal.classList.add('hidden');
+        mpesaModal.classList.remove('flex');
+      }
+    });
+
+    presets.forEach(p => {
+      p.addEventListener('click', () => {
+        presets.forEach(btn => {
+          btn.classList.remove('bg-primary', 'text-on-primary');
+          btn.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        p.classList.remove('bg-surface-container', 'text-on-surface');
+        p.classList.add('bg-primary', 'text-on-primary');
+        const val = p.getAttribute('data-amt');
+        triggerStk.innerHTML = '<span class="material-symbols-outlined text-[20px]">send_to_mobile</span><span>Send STK Prompt (KES ' + Number(val).toLocaleString() + ')</span>';
+      });
+    });
+
+    if (triggerStk) {
+      triggerStk.addEventListener('click', () => {
+        mpesaModal.classList.add('hidden');
+        mpesaModal.classList.remove('flex');
+        showToast('M-Pesa STK push dispatched to your phone! 📲');
+      });
+    }
+  }
+
+  // Offer / Ask Launcher triggers
+  const offerBtn = document.getElementById('open-offer-modal');
+  const askBtn = document.getElementById('open-ask-modal');
+
+  if (offerBtn) {
+    offerBtn.addEventListener('click', () => {
+      showToast('Opening quick tool & spare listing card...');
+    });
+  }
+
+  if (askBtn) {
+    askBtn.addEventListener('click', () => {
+      showToast('Create instant neighborhood request broadcast...');
+    });
+  }
+
+  // Toast Helper
+  function showToast(message) {
+    const toast = document.getElementById('toast-pill');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+    toastText.textContent = message;
+    toast.classList.remove('opacity-0', '-translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', '-translate-y-4');
+    }, 2800);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(28,30,27,0.06)]" data-active-classes="text-primary-container font-bold [&>div]:bg-primary/10 [&>div]:scale-105"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[70px] min-h-[44px] py-1 text-on-surface-variant transition-all" data-path="mtaa-feed" href="#"><div class="flex items-center justify-center w-10 h-7 rounded-full transition-all duration-200 mb-1"><span class="material-symbols-outlined text-[22px]">newspaper</span></div><span class="font-label-sm text-label-sm text-center tracking-tight">Mtaa Feed</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[70px] min-h-[44px] py-1 transition-all relative text-primary-container font-bold [&>div]:bg-primary/10 [&>div]:scale-105" data-path="ujamaa-hub" href="#"><div class="relative flex items-center justify-center w-10 h-7 rounded-full transition-all duration-200 mb-1"><span class="material-symbols-outlined text-[22px]">diversity_1</span><span class="absolute -top-1.5 -right-3 px-1 py-0.2 bg-secondary text-on-secondary font-label-sm text-[10px] rounded-full leading-tight font-bold shadow-sm">+3</span></div><span class="font-label-sm text-label-sm text-center tracking-tight">Ujamaa Hub</span></a><a class="flex flex-col items-center justify-center min-w-[70px] min-h-[44px] py-1 text-on-surface-variant transition-all" data-path="baraza" href="#"><div class="flex items-center justify-center w-10 h-7 rounded-full transition-all duration-200 mb-1"><span class="material-symbols-outlined text-[22px]">forum</span></div><span class="font-label-sm text-label-sm text-center tracking-tight">Baraza</span></a><a class="flex flex-col items-center justify-center min-w-[70px] min-h-[44px] py-1 text-on-surface-variant transition-all" data-path="resident-profile" href="#"><div class="flex items-center justify-center w-10 h-7 rounded-full transition-all duration-200 mb-1"><span class="material-symbols-outlined text-[22px]">verified_user</span></div><span class="font-label-sm text-label-sm text-center tracking-tight">Profile</span></a></div></nav></body></html>

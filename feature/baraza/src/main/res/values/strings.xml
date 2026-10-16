@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Top bar -->
+    <string name="baraza_title">Baraza</string>
+    <string name="baraza_subtitle">Utawala wa mtaa</string>
+
+    <!-- Empty states -->
+    <string name="baraza_select_neighborhood">Chagua mtaa wako</string>
+    <string name="baraza_select_neighborhood_message">Chagua mtaa wako ili kuona baraza na miradi ya kijamii.</string>
+    <string name="baraza_empty_title">Bado hakuna baraza</string>
+    <string name="baraza_empty_message">Hakuna mikutano, miradi au mada zilizofunguliwa katika mtaa wako.</string>
+
+    <!-- Section headers -->
+    <string name="baraza_upcoming_meetings">Mikutano ijayo</string>
+    <string name="baraza_harambee_projects">Miradi ya Harambee</string>
+    <string name="baraza_forum_threads">Mada za Baraza</string>
+
+    <!-- Council banner -->
+    <string name="baraza_live">Baraza hai</string>
+    <string name="baraza_area">Eneo</string>
+    <string name="baraza_houses">Nyumba</string>
+
+    <!-- Event card -->
+    <string name="baraza_hybrid">Hybrid</string>
+    <string name="baraza_main_agenda">Ajenda kuu:</string>
+    <string name="baraza_attending_format">%d jirani wanahudhuria</string>
+    <string name="baraza_questions_format">%d maswali</string>
+    <string name="baraza_rsvp_registered">Umesajiliwa — Bonyeza kuondoa</string>
+    <string name="baraza_rsvp_register">Jiandikishe kuhudhuria</string>
+    <string name="baraza_ask_question">Uliza swali</string>
+
+    <!-- Project card -->
+    <string name="baraza_raised_format">KES %1$s / %2$s imekusanywa</string>
+    <string name="baraza_joined">Umejiunga</string>
+    <string name="baraza_join">Jiunga</string>
+    <string name="baraza_closed">Imefungwa</string>
+
+    <!-- Thread card -->
+    <string name="baraza_vote">Kura</string>
+    <string name="baraza_solved">Imetatuliwa</string>
+    <string name="baraza_replies_format">%d majibu</string>
+
+    <!-- CTA -->
+    <string name="baraza_start_initiative">Anzisha mpango mpya</string>
+    <string name="baraza_start_initiative_message">Pendekeza baraza au mradi wa kijamii kwa mtaa wako</string>
+
+    <!-- Toasts -->
+    <string name="baraza_toast_rsvp_on">Umesajiliwa barazani</string>
+    <string name="baraza_toast_rsvp_off">Umeondoa usajili wako</string>
+    <string name="baraza_toast_volunteer_on">Umejiunga na kikosi cha kujitolea</string>
+    <string name="baraza_toast_volunteer_off">Umeondoka kwenye kikosi</string>
+    <string name="baraza_toast_question_queued">Swali limeongezwa kwenye orodha</string>
+</resources>
