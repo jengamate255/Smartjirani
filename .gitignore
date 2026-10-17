@@ -21,6 +21,9 @@ release/
 build/
 */build/
 
+# Kotlin
+.kotlin/
+
 # Local configuration file
 local.properties
 
@@ -86,6 +89,7 @@ out/
 
 # Supabase
 .supabase/
+supabase/.branches/
 functions/node_modules/
 
 # OS files
