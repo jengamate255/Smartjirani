@@ -9,6 +9,7 @@ import com.smartjirani.feature.civic.CivicQueueData
 import com.smartjirani.feature.civic.CivicReport
 import com.smartjirani.feature.civic.CivicRepository
 import com.smartjirani.feature.civic.CivicRole
+import com.smartjirani.feature.civic.official.CivicOfficialFeed
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every
@@ -33,12 +34,14 @@ import org.junit.Test
 class CivicHubViewModelTest {
     private val testDispatcher = StandardTestDispatcher()
     private lateinit var civicRepository: CivicRepository
+    private lateinit var officialFeed: CivicOfficialFeed
     private lateinit var userPreferencesRepository: UserPreferencesRepository
 
     @Before
     fun setup() {
         Dispatchers.setMain(testDispatcher)
         civicRepository = mockk()
+        officialFeed = mockk(relaxed = true)
         userPreferencesRepository =
             mockk {
                 every { userPreferences } returns
@@ -97,7 +100,7 @@ class CivicHubViewModelTest {
                 )
             coEvery { civicRepository.getAnalytics() } returns Resource.Success(CivicAnalytics(total = 2, slaMet = 1))
 
-            val vm = CivicHubViewModel(civicRepository, userPreferencesRepository)
+            val vm = CivicHubViewModel(civicRepository, officialFeed, userPreferencesRepository)
             advanceUntilIdle()
 
             val state = vm.uiState.value
@@ -124,7 +127,7 @@ class CivicHubViewModelTest {
             } returns Resource.Success(Unit)
             coEvery { civicRepository.getAnalytics() } returns Resource.Success(CivicAnalytics())
 
-            val vm = CivicHubViewModel(civicRepository, userPreferencesRepository)
+            val vm = CivicHubViewModel(civicRepository, officialFeed, userPreferencesRepository)
             advanceUntilIdle()
 
             vm.publishAnnouncement("Kichwa", "Maelezo marefu ya tangazo.", "NOTICE", false)
@@ -149,7 +152,7 @@ class CivicHubViewModelTest {
             } returns Resource.Error("forbidden")
             coEvery { civicRepository.getAnalytics() } returns Resource.Success(CivicAnalytics())
 
-            val vm = CivicHubViewModel(civicRepository, userPreferencesRepository)
+            val vm = CivicHubViewModel(civicRepository, officialFeed, userPreferencesRepository)
             advanceUntilIdle()
 
             vm.publishAnnouncement("Kichwa", "Maelezo marefu ya tangazo.", "NOTICE", true)
@@ -181,7 +184,7 @@ class CivicHubViewModelTest {
             coEvery { civicRepository.getAnnouncements() } returns Resource.Success(emptyList())
             coEvery { civicRepository.getAnalytics() } returns Resource.Success(CivicAnalytics())
 
-            val vm = CivicHubViewModel(civicRepository, userPreferencesRepository)
+            val vm = CivicHubViewModel(civicRepository, officialFeed, userPreferencesRepository)
             advanceUntilIdle()
 
             assertEquals(3, vm.uiState.value.visibleReports.size)
@@ -220,7 +223,7 @@ class CivicHubViewModelTest {
                     ),
                 )
 
-            val vm = CivicHubViewModel(civicRepository, userPreferencesRepository)
+            val vm = CivicHubViewModel(civicRepository, officialFeed, userPreferencesRepository)
             advanceUntilIdle()
 
             val state = vm.uiState.value
@@ -241,7 +244,7 @@ class CivicHubViewModelTest {
             coEvery { civicRepository.getAnnouncements() } returns Resource.Success(emptyList())
             coEvery { civicRepository.getAnalytics() } returns Resource.Error("boom")
 
-            val vm = CivicHubViewModel(civicRepository, userPreferencesRepository)
+            val vm = CivicHubViewModel(civicRepository, officialFeed, userPreferencesRepository)
             advanceUntilIdle()
 
             assertNull(vm.uiState.value.analytics)

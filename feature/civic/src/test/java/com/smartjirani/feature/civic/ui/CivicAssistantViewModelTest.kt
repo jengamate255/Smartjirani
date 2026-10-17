@@ -1,8 +1,10 @@
 package com.smartjirani.feature.civic.ui
 
+import com.smartjirani.core.audio.AudioRecorder
 import com.smartjirani.core.common.result.Resource
 import com.smartjirani.core.location.LocationRepository
 import com.smartjirani.feature.civic.CivicAiAssistantReply
+import com.smartjirani.feature.civic.CivicAiDedupResult
 import com.smartjirani.feature.civic.CivicAiProvider
 import com.smartjirani.feature.civic.CivicAiTriageResult
 import com.smartjirani.feature.civic.CivicRepository
@@ -137,6 +139,10 @@ class CivicNewReportTriageTest {
             val locationRepository = mockk<LocationRepository>()
 
             coEvery { civicRepository.getCategories() } returns Resource.Success(emptyList())
+            coEvery { civicAiProvider.checkDuplicates(any(), any()) } returns
+                Resource.Success(
+                    CivicAiDedupResult(matches = emptyList(), provider = "keyword-mock", mock = true),
+                )
             coEvery {
                 civicRepository.submitReport(any(), any(), any(), any(), any(), any(), any(), any(), any())
             } returns
@@ -161,7 +167,8 @@ class CivicNewReportTriageTest {
                     ),
                 )
 
-            val vm = CivicNewReportViewModel(civicRepository, civicAiProvider, locationRepository)
+            val audioRecorder = mockk<AudioRecorder>()
+            val vm = CivicNewReportViewModel(civicRepository, civicAiProvider, locationRepository, audioRecorder)
             advanceUntilIdle()
 
             vm.submit(
@@ -186,6 +193,10 @@ class CivicNewReportTriageTest {
             val locationRepository = mockk<LocationRepository>()
 
             coEvery { civicRepository.getCategories() } returns Resource.Success(emptyList())
+            coEvery { civicAiProvider.checkDuplicates(any(), any()) } returns
+                Resource.Success(
+                    CivicAiDedupResult(matches = emptyList(), provider = "keyword-mock", mock = true),
+                )
             coEvery {
                 civicRepository.submitReport(any(), any(), any(), any(), any(), any(), any(), any(), any())
             } returns
@@ -199,7 +210,8 @@ class CivicNewReportTriageTest {
                 )
             coEvery { civicAiProvider.triageReport("r-2") } returns Resource.Error("gemini_http_500")
 
-            val vm = CivicNewReportViewModel(civicRepository, civicAiProvider, locationRepository)
+            val audioRecorder = mockk<AudioRecorder>()
+            val vm = CivicNewReportViewModel(civicRepository, civicAiProvider, locationRepository, audioRecorder)
             advanceUntilIdle()
 
             vm.submit(

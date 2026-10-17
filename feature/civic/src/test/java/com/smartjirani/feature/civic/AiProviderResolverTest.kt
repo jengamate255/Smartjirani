@@ -39,4 +39,18 @@ private class FakeSupabaseProvider : CivicAiProvider {
     override suspend fun sendMessage(message: String) = throw NotImplementedError()
 
     override suspend fun summarizeReport(reportId: String) = throw NotImplementedError()
+
+    override suspend fun routeReport(reportId: String) = throw NotImplementedError()
+
+    override suspend fun checkDuplicates(
+        title: String,
+        description: String,
+    ) = throw NotImplementedError()
+
+    override suspend fun transcribeAudio(
+        audioBase64: String,
+        filename: String,
+    ) = throw NotImplementedError()
+
+    override suspend fun analyzeReport(reportId: String) = throw NotImplementedError()
 }
