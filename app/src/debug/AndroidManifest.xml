@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Debug-only manifest overlay.
+
+  Allows cleartext (plain HTTP) traffic so the app can reach a locally running
+  Supabase stack from the Android emulator at http://10.0.2.2:54321.
+  Release builds keep Android's default (cleartext blocked).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:usesCleartextTraffic="true" />
+</manifest>

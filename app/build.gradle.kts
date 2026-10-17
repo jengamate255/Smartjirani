@@ -67,23 +67,47 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = rootProject.file(smartjiraniKeystorePath)
-            storePassword = smartjiraniKeystorePassword
-            keyAlias = smartjiraniKeyAlias
-            keyPassword = smartjiraniKeyPassword
+            if (smartjiraniKeystorePath.isNotBlank()) {
+                storeFile = rootProject.file(smartjiraniKeystorePath)
+            } else {
+                // Use a dummy file when signature not configured
+                storeFile = rootProject.file("dummy-release-keystore.jks")
+            }
+            storePassword =
+                if (smartjiraniKeystorePassword.isNotBlank()) {
+                    smartjiraniKeystorePassword
+                } else {
+                    "password123" // placeholder password for dummy keystore
+                }
+            keyAlias =
+                if (smartjiraniKeyAlias.isNotBlank()) {
+                    smartjiraniKeyAlias
+                } else {
+                    "dummy-key-alias"
+                }
+            keyPassword =
+                if (smartjiraniKeyPassword.isNotBlank()) {
+                    smartjiraniKeyPassword
+                } else {
+                    "password123" // placeholder password for dummy key
+                }
         }
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro",
-            )
             if (smartjiraniKeystorePath.isNotBlank() && smartjiraniKeystorePassword.isNotBlank()) {
-                signingConfig = signingConfigs.getByName("release")
+                // Release keystore available - enable optimization
+                isMinifyEnabled = true
+                isShrinkResources = true
+                proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro",
+                )
+            } else {
+                // No signature config - disable optimization to avoid errors
+                isMinifyEnabled = false
+                isShrinkResources = false
             }
         }
         debug {
@@ -95,8 +119,9 @@ android {
         abi {
             isEnable = true
             reset()
-            // x86/x86_64 (emulator-only) dropped to keep direct-APK downloads small for mobile data
-            include("arm64-v8a", "armeabi-v7a")
+            // x86/x86_64 (emulator-only) dropped to keep direct-APK downloads small for mobile data.
+            // x86_64 re-added so the app can run on a local x86_64 emulator.
+            include("arm64-v8a", "armeabi-v7a", "x86_64")
             isUniversalApk = false
         }
     }
